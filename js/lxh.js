@@ -1,11 +1,9 @@
 function show_gamecrate_cratetest(){
     activate_left_nav("cratetest");
 
-    $("#explore-container").html('<div id="mychart"></div>');
-    var div_chart = document.getElementById("mychart");
-    var chart = echarts.init(div_chart);
+    var div_chart = $("<div></div>").attr("style", "width: 400px; height:400px");
+    var chart = echarts.init(div_chart[0]);
 
-    // 指定图表的配置项和数据
     var option = {
         title: {
             text: 'ECharts 入门示例'
@@ -25,8 +23,8 @@ function show_gamecrate_cratetest(){
         }]
     };
 
-    // 使用刚指定的配置项和数据显示图表。
     chart.setOption(option);
+    $("#explore-container").append(div_chart);
 }
 
 
