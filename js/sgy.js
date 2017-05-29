@@ -3,6 +3,12 @@ function show_userbehaviour_userreturning(){
     $("#explore-container").html("<h2>HELLO WORLD to USERRETURNING</h2>");
 }
 
+function show_userbehaviour_sessionnum(){
+    activate_left_nav("sessionnum");
+    $("#explore-container").html("<h2>HELLO WORLD to SESSIONNUM</h2>");
+}
+
+
 
 /* TODO
 this is the EMPLATE for new entry page
@@ -23,7 +29,9 @@ ${ENTRY_NAME} 为对应分析的東西,自己随便改名字
 */
 
 var show_first_userbehaviour = show_userbehaviour_userreturning;
-$("#left-nav-userbehaviour #left-nav-userreturning").click(show_first_userbehaviour);
+$("#left-nav-userbehaviour #left-nav-userreturning").click(show_userbehaviour_userreturning);
+$("#left-nav-userbehaviour #left-nav-sessionnum").click(show_userbehaviour_sessionnum);
+
 
 $("#nav-userbehaviour").click(function(){
     reset_active_nav();

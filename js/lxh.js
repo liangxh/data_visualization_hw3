@@ -6,21 +6,19 @@ function show_gamecrate_cratetest(){
 
     var option = {
         title: {
-            text: 'ECharts 入门示例'
+            text: '第n回合再玩率分佈'
         },
         tooltip: {},
-        legend: {
-            data:['销量']
-        },
-        xAxis: {
-            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-        },
         yAxis: {},
-        series: [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-        }]
+        xAxis: {data:[1, 2, 3, 4, 5, 6]},
+        legend: {
+            data:['line1', 'line2'],
+            right:10,
+        },
+        series: [
+            {name: 'line1', type: 'line', data: [5, 20, 36, 10, 10, 20], show:false},
+            {name: 'line2', type: 'line', data: [25, 15, 20, 5, 3, 20]}
+        ]
     };
 
     chart.setOption(option);
