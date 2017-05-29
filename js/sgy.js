@@ -3,12 +3,16 @@ function show_userbehaviour_userreturning(){
     $("#explore-container").html("<h2>HELLO WORLD to USERRETURNING</h2>");
 }
 
-function show_userbehaviour_sessionnum(){
+$("#left-nav-userbehaviour #left-nav-sessionnum").click(function(){
+    //reset_active_nav();
+    //$("#nav-userbehaviour").addClass("active");
+    //$("#left-nav-userbehaviour").show();
     activate_left_nav("sessionnum");
-    $("#explore-container").html("<h2>HELLO WORLD to SESSIONNUM</h2>");
-}
+    var data = Array(); //把准备好的數據直接放在这里或js的其他地方
 
-
+    var html="HELLO WORLD";
+    $("#explore-container").html(html);
+});
 
 /* TODO
 this is the EMPLATE for new entry page
@@ -30,8 +34,6 @@ ${ENTRY_NAME} 为对应分析的東西,自己随便改名字
 
 var show_first_userbehaviour = show_userbehaviour_userreturning;
 $("#left-nav-userbehaviour #left-nav-userreturning").click(show_userbehaviour_userreturning);
-$("#left-nav-userbehaviour #left-nav-sessionnum").click(show_userbehaviour_sessionnum);
-
 
 $("#nav-userbehaviour").click(function(){
     reset_active_nav();
