@@ -55,6 +55,7 @@
       <ul class="nav navbar-nav navbar-left">
        <li id="nav-userbehaviour" class="active"><a><img src="img/userbehaviour.png">用戶行为分析</a></li>
        <li id="nav-gameattr"><a><img src="img/gameattr.png">牌局属性分析</a></li>
+       <li id="nav-gamecrate"><a><img src="img/gameattr.png">牌局再玩率分析</a></li>
 
        <!--
        <li id="nav-doc" class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">文档<b class="caret"></b></a>
@@ -95,6 +96,13 @@
     </ul>
     <!-->
 
+    <!--牌局再玩率分析-->
+    <ul id="left-nav-gamecrate" style="display:none">
+     <li id="left-nav-cratetest"><a class="left-chart-nav-link" href="#gamecrate-cratetest">
+       <div class="chart-name">TEST</div></a></li>
+    </ul>
+    <!-->
+
     <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
      <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
     </div>
@@ -115,6 +123,7 @@
   <script type="text/javascript" src="js/perfect-scrollbar.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/config.js"></script>
+  <script type="text/javascript" src="js/echarts.min.js"></script>
 
   <!--page control-->
   <script type="text/javascript">
@@ -132,6 +141,15 @@
 
   <script type="text/javascript" src="js/myh.js"></script>
   <script type="text/javascript" src="js/sgy.js"></script>
+  <script type="text/javascript" src="js/lxh.js"></script>
+
+  <script type="text/javascript">
+   $(document).ready(function(){
+    show_first_userbehaviour();
+    //show_first_gameattr();
+    //show_first_gamecrate();
+   });
+  </script>
 
  </body>
 </html>

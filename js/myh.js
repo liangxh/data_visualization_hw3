@@ -21,6 +21,10 @@ ${COLUMN_NAME}为"gameattr"
 ${ENTRY_NAME} 为对应分析的東西,自己随便改名字
 */
 
+var show_first_gameattr = show_gameattr_gametime;
+$("#left-nav-gameattr #left-nav-gametime").click(show_first_gameattr);
+
+
 $("#nav-gameattr").click(function(){
     reset_active_nav();
     $("#nav-gameattr").addClass("active");
@@ -28,5 +32,3 @@ $("#nav-gameattr").click(function(){
     show_first_gameattr();
 });
 
-var show_first_gameattr = show_gameattr_gametime;
-$("#left-nav-gameattr #left-nav-gametime").click(show_first_gameattr);
