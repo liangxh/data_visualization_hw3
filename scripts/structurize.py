@@ -237,8 +237,8 @@ def dump_user_sessions(date):
 
 
 def get_session_distribution(user_sessions):
-    num = 0
     timeseries = {}
+    session_timeseries = {}
     for sessions in user_sessions.values():
         for session in sessions:
             for single in session:
@@ -249,14 +249,55 @@ def get_session_distribution(user_sessions):
                     timeseries[day] = timeseries[day] + 1
                 else:
                     timeseries[day] = 1
-                num = num + 1
-    outfile = open('../data/session_distribution.json','w')
+            # session time
+            timestamp = session[0]['time']
+            d = datetime.datetime.fromtimestamp(timestamp)
+            day = d.strftime("%Y%m%d")
+            
+            if day in session_timeseries.keys():
+                session_timeseries[day] = session_timeseries[day] + 1
+            else:
+                session_timeseries[day] = 1
+
+    outfile = open('../data/paiju.json','w')
     res_json = json.dumps(timeseries,sort_keys=True)
     outfile.write(res_json)
     outfile.close()
+    outfile = open('../data/session_distribution.json','w')
+    res_json = json.dumps(session_timeseries,sort_keys=True)
+    outfile.write(res_json)
+    outfile.close()
+    
 
-
-
+def get_session_week_distribution(user_sessions):
+    timeseries = {}
+    session_timeseries = {}
+    for sessions in user_sessions.values():
+        for session in sessions:
+            for single in session:
+                timestamp = single['time']
+                d = datetime.datetime.fromtimestamp(timestamp)
+                day = d.weekday()
+                if day in timeseries.keys():
+                    timeseries[day] = timeseries[day] + 1
+                else:
+                    timeseries[day] = 1
+            # session time
+            timestamp = session[0]['time']
+            d = datetime.datetime.fromtimestamp(timestamp)
+            day = d.weekday()
+            
+            if day in session_timeseries.keys():
+                session_timeseries[day] = session_timeseries[day] + 1
+            else:
+                session_timeseries[day] = 1
+    outfile = open('../data/session_distribution_week.json','w')
+    res_json = json.dumps(timeseries,sort_keys=True)
+    outfile.write(res_json+'\n')
+    res_json = json.dumps(session_timeseries,sort_keys=True)
+    outfile.write(res_json)
+    outfile.close()
 
 user_sessions = load_week()
 get_session_distribution(user_sessions)
+#get_session_week_distribution(user_sessions)
