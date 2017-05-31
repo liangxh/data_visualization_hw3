@@ -4,7 +4,6 @@
     <list default="true" id="e6799330-524b-4436-9f5a-04c6fc0d41fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sgy.js" afterPath="$PROJECT_DIR$/js/sgy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/structurize.py" afterPath="$PROJECT_DIR$/scripts/structurize.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,18 +31,8 @@
       <file leaf-file-name="sgy.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/sgy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session_distribution_week.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/session_distribution_week.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="9" />
+            <state relative-caret-position="75">
+              <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -254,7 +243,7 @@
       <option name="presentableId" value="Default" />
       <updated>1496067329143</updated>
       <workItem from="1496067330322" duration="13855000" />
-      <workItem from="1496151476421" duration="7685000" />
+      <workItem from="1496151476421" duration="8456000" />
     </task>
     <task id="LOCAL-00001" summary="试一下 push">
       <created>1496067478648</created>
@@ -284,11 +273,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496154031047</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加用户留存率">
+      <created>1496218273716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1496218273716</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21540000" />
+    <option name="totallyTimeSpent" value="22311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="23" width="1383" height="877" extended-state="6" />
@@ -323,7 +319,8 @@
     <MESSAGE value="完成每日 session。" />
     <MESSAGE value="remove .IDEA" />
     <MESSAGE value="添加用户周牌局和 session 分布" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加用户周牌局和 session 分布" />
+    <MESSAGE value="添加用户留存率" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加用户留存率" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -393,14 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/session_distribution_week.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/session_distribution.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -425,10 +414,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/session_distribution_week.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/sgy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding />
         </state>
       </provider>

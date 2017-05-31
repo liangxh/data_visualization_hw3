@@ -3,7 +3,7 @@ function show_userbehaviour_userreturning() {
     var div_chart = $("<div></div>").attr("style", "width: 1200px; height:800px");
     var chart = echarts.init(div_chart[0]);
     //var after_days = ['1', '2', '3', '4', '5', '6', '7'];
-    var after_days = new Array(31);
+    var after_days = new Array(32);
     for (var i = 0; i < after_days.length; i++) {
         after_days[i] = (i + 1).toString();
     }
@@ -28,6 +28,7 @@ function show_userbehaviour_userreturning() {
         xAxis: {
             type: 'category',
             data: days,
+            name: 'Install date',
             splitArea: {
                 show: true
             }
@@ -35,6 +36,7 @@ function show_userbehaviour_userreturning() {
         yAxis: {
             type: 'category',
             data: after_days,
+            name: 'Days after install',
             splitArea: {
                 show: true
             }
