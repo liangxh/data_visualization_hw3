@@ -298,6 +298,42 @@ def get_session_week_distribution(user_sessions):
     outfile.write(res_json)
     outfile.close()
 
+def get_user_returning(user_sessions):
+    timeseries = {}
+    for sessions in user_sessions.values():
+        for session in sessions:
+            for single in session:
+                timestamp = single['time']
+                device_id = single['deviceId']
+                d = datetime.datetime.fromtimestamp(timestamp)
+                day = d.strftime("%m%d")
+                if day in timeseries.keys():
+                    timeseries[day].add(device_id) 
+                else:
+                    timeseries[day] = set()
+                    timeseries[day].add(device_id)
+    outfile = open('../data/user_returnning.json','w')
+    timeseries = sorted(timeseries.iteritems(), key= lambda asd:asd[0], reverse=False)
+    # res_json = json.dumps(timeseries,sort_keys=True)
+    # for timeserial in timeseries.keys():
+        # outfile.write(timeserial + ' ' + str(timeseries[timeserial]) + '\n')
+    for i in range(0,len(timeseries)):
+        #outfile.write(timeseries[i][0]+'\t')
+        outfile.write('['+str(i)+',0,'+str(len(timeseries[i][1]))+'],')
+        for j in range(i+1,len(timeseries)):
+            num = 0
+            for item in timeseries[i][1]:
+                if item in timeseries[j][1]:
+                    num = num + 1
+            outfile.write('['+str(i)+','+str(j-i)+','+str(num)+'],')
+        # outfile.write('\n')
+    outfile.write('\n')
+    for i in range(0,len(timeseries)):
+        outfile.write("\""+timeseries[i][0]+'\",')
+
+    outfile.close()
+
 user_sessions = load_week()
-get_session_distribution(user_sessions)
+#get_session_distribution(user_sessions)
 #get_session_week_distribution(user_sessions)
+get_user_returning(user_sessions)

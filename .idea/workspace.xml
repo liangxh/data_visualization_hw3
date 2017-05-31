@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e6799330-524b-4436-9f5a-04c6fc0d41fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/session_distribution.json" afterPath="$PROJECT_DIR$/data/session_distribution.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sgy.js" afterPath="$PROJECT_DIR$/js/sgy.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/structurize.py" afterPath="$PROJECT_DIR$/scripts/structurize.py" />
     </list>
@@ -34,8 +32,8 @@
       <file leaf-file-name="sgy.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/sgy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="160" column="46" lean-forward="false" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
+            <state relative-caret-position="192">
+              <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -113,6 +111,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data_visualization_hw3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization_hw3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_visualization_hw3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,7 +254,7 @@
       <option name="presentableId" value="Default" />
       <updated>1496067329143</updated>
       <workItem from="1496067330322" duration="13855000" />
-      <workItem from="1496151476421" duration="2450000" />
+      <workItem from="1496151476421" duration="7685000" />
     </task>
     <task id="LOCAL-00001" summary="试一下 push">
       <created>1496067478648</created>
@@ -265,11 +277,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496151533279</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加用户周牌局和 session 分布">
+      <created>1496154031047</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496154031047</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16305000" />
+    <option name="totallyTimeSpent" value="21540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="23" width="1383" height="877" extended-state="6" />
@@ -303,7 +322,8 @@
     <MESSAGE value="试一下 push" />
     <MESSAGE value="完成每日 session。" />
     <MESSAGE value="remove .IDEA" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove .IDEA" />
+    <MESSAGE value="添加用户周牌局和 session 分布" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加用户周牌局和 session 分布" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -397,10 +417,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/format.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/sgy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="160" column="46" lean-forward="false" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
+        <state relative-caret-position="192">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
           <folding />
         </state>
       </provider>
