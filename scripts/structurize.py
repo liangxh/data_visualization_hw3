@@ -333,7 +333,37 @@ def get_user_returning(user_sessions):
 
     outfile.close()
 
+def get_user_hours(user_sessions):
+    timeseries = {}
+    session_timeseries = {}
+    for sessions in user_sessions.values():
+        for session in sessions:
+            for single in session:
+                timestamp = single['time']
+                d = datetime.datetime.fromtimestamp(timestamp)
+                hour = d.hour
+                if hour in timeseries.keys():
+                    timeseries[hour] = timeseries[hour] + 1
+                else:
+                    timeseries[hour] = 1
+            # session time
+            timestamp = session[0]['time']
+            d = datetime.datetime.fromtimestamp(timestamp)
+            hour = d.hour
+            
+            if hour in session_timeseries.keys():
+                session_timeseries[hour] = session_timeseries[hour] + 1
+            else:
+                session_timeseries[hour] = 1
+    outfile = open('../data/session_distribution_hours.json','w')
+    res_json = json.dumps(timeseries,sort_keys=True)
+    outfile.write(res_json+'\n')
+    res_json = json.dumps(session_timeseries,sort_keys=True)
+    outfile.write(res_json)
+    outfile.close()
+
 user_sessions = load_week()
 #get_session_distribution(user_sessions)
 #get_session_week_distribution(user_sessions)
-get_user_returning(user_sessions)
+# get_user_returning(user_sessions)
+get_user_hours(user_sessions)
