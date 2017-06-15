@@ -73,6 +73,17 @@ $("#left-nav-userbehaviour #left-nav-sessionweekday").click(function () {
         title: {
             text: '周内session数目分布'
         },
+        //右上角工具条
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -117,6 +128,17 @@ $("#left-nav-userbehaviour #left-nav-paijuweekday").click(function () {
     var option = {
         title: {
             text: '周内局数数目分布'
+        },
+        //右上角工具条
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
         },
         tooltip: {
             trigger: 'axis',
@@ -176,6 +198,17 @@ $("#left-nav-userbehaviour #left-nav-sessionnum").click(function () {
             title: {
                 text: '每日session数量分布'
             },
+            //右上角工具条
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
             tooltip: {
                 trigger: 'axis',
                 formatter: function (params) {
@@ -218,8 +251,7 @@ $("#left-nav-userbehaviour #left-nav-sessionnum").click(function () {
     });
 });
 
-
-$("#left-nav-userbehaviour #left-nav-paijunnum").click(function () {
+$("#left-nav-userbehaviour #left-nav-paijunum").click(function () {
     $.getJSON('data/paiju.json', function (mydata) {
         activate_left_nav("paijunum");
         var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
@@ -241,6 +273,17 @@ $("#left-nav-userbehaviour #left-nav-paijunnum").click(function () {
         var option = {
             title: {
                 text: '每日牌局数量分布'
+            },
+            //右上角工具条
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
             },
             tooltip: {
                 trigger: 'axis',
@@ -293,6 +336,17 @@ $("#left-nav-userbehaviour #left-nav-sessionhour").click(function () {
         title: {
             text: '周内session数目分布'
         },
+        //右上角工具条
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -328,7 +382,6 @@ $("#left-nav-userbehaviour #left-nav-sessionhour").click(function () {
     chart.setOption(option);
     $("#explore-container").append(div_chart);
 });
-
 
 var show_first_userbehaviour = show_userbehaviour_userreturning;
 $("#left-nav-userbehaviour #left-nav-userreturning").click(show_userbehaviour_userreturning);
