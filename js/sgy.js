@@ -1,6 +1,6 @@
 function show_userbehaviour_userreturning() {
     activate_left_nav("userreturning");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:800px");
+    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:900px");
     var chart = echarts.init(div_chart[0]);
     //var after_days = ['1', '2', '3', '4', '5', '6', '7'];
     var after_days = new Array(32);
@@ -12,7 +12,7 @@ function show_userbehaviour_userreturning() {
 
     option = {
         title: {
-            text: '用户留存率分析'
+            text: '用户留存率分析', left: 'center',
         },
         animation: false,
         grid: {
@@ -66,12 +66,12 @@ function show_userbehaviour_userreturning() {
 
 $("#left-nav-userbehaviour #left-nav-sessionweekday").click(function () {
     activate_left_nav("sessionweekday");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 600px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title: {
-            text: '周内session数目分布'
+            text: '周内session数目分布', left: 'center',
         },
         //右上角工具条
         toolbox: {
@@ -111,7 +111,7 @@ $("#left-nav-userbehaviour #left-nav-sessionweekday").click(function () {
             {
                 name: 'session数',
                 type: 'bar',
-                barWidth: '30%',
+                barWidth: '50%',
                 data: [322, 342, 378, 435, 420, 378, 307]
             }
         ]
@@ -122,12 +122,12 @@ $("#left-nav-userbehaviour #left-nav-sessionweekday").click(function () {
 
 $("#left-nav-userbehaviour #left-nav-paijuweekday").click(function () {
     activate_left_nav("paijuweekday");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 600px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title: {
-            text: '周内局数数目分布'
+            text: '周内局数数目分布', left: 'center',
         },
         //右上角工具条
         toolbox: {
@@ -166,7 +166,7 @@ $("#left-nav-userbehaviour #left-nav-paijuweekday").click(function () {
         series: [{
             name: '牌局数',
             type: 'bar',
-            barWidth: '30%',
+            barWidth: '50%',
             data: [13065, 13308, 12847, 15359, 15094, 11891, 12156]
         }
         ]
@@ -178,7 +178,7 @@ $("#left-nav-userbehaviour #left-nav-paijuweekday").click(function () {
 $("#left-nav-userbehaviour #left-nav-sessionnum").click(function () {
     $.getJSON('data/session_distribution.json', function (mydata) {
         activate_left_nav("sessionnum");
-        var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+        var div_chart = $("<div></div>").attr("style", "width: 1000px; height:500px");
         var chart = echarts.init(div_chart[0]);
 
         var data = [];
@@ -196,7 +196,7 @@ $("#left-nav-userbehaviour #left-nav-sessionnum").click(function () {
 
         var option = {
             title: {
-                text: '每日session数量分布'
+                text: '每日session数量分布', left: 'center',
             },
             //右上角工具条
             toolbox: {
@@ -254,7 +254,7 @@ $("#left-nav-userbehaviour #left-nav-sessionnum").click(function () {
 $("#left-nav-userbehaviour #left-nav-paijunum").click(function () {
     $.getJSON('data/paiju.json', function (mydata) {
         activate_left_nav("paijunum");
-        var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+        var div_chart = $("<div></div>").attr("style", "width: 1000px; height:500px");
         var chart = echarts.init(div_chart[0]);
 
         var data = [];
@@ -272,7 +272,7 @@ $("#left-nav-userbehaviour #left-nav-paijunum").click(function () {
 
         var option = {
             title: {
-                text: '每日牌局数量分布'
+                text: '每日牌局数量分布', left: 'center',
             },
             //右上角工具条
             toolbox: {
@@ -329,12 +329,12 @@ $("#left-nav-userbehaviour #left-nav-paijunum").click(function () {
 
 $("#left-nav-userbehaviour #left-nav-sessionhour").click(function () {
     activate_left_nav("sessionhour");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title: {
-            text: '周内session数目分布'
+            text: '周内session数目分布', left: 'center',
         },
         //右上角工具条
         toolbox: {

@@ -1,11 +1,11 @@
 function show_gameattr_gametime(){
     activate_left_nav("gametime");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局平均时长分布'
+            text: '牌局平均时长分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis',
@@ -59,12 +59,12 @@ function show_gameattr_gametime(){
 
 $("#left-nav-gameattr #left-nav-winrate").click(function () {
     activate_left_nav("winrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局胜率分布'
+            text: '牌局胜率分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis',
@@ -117,12 +117,12 @@ $("#left-nav-gameattr #left-nav-winrate").click(function () {
 
 $("#left-nav-gameattr #left-nav-gametime-winrate").click(function () {
     activate_left_nav("gametime-winrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局胜率时长联合分布'
+            text: '牌局胜率时长联合分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis',
@@ -160,12 +160,12 @@ $("#left-nav-gameattr #left-nav-gametime-winrate").click(function () {
 
 $("#left-nav-gameattr #left-nav-replayrate").click(function () {
     activate_left_nav("replayrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局再玩率分布'
+            text: '牌局再玩率分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis',
@@ -219,12 +219,12 @@ $("#left-nav-gameattr #left-nav-replayrate").click(function () {
 
 $("#left-nav-gameattr #left-nav-replayrate-winrate").click(function () {
     activate_left_nav("replayrate-winrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局胜率再玩率联合分布'
+            text: '牌局胜率再玩率联合分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis'
@@ -259,7 +259,7 @@ $("#left-nav-gameattr #left-nav-replayrate-winrate").click(function () {
 
 $("#left-nav-userbehaviour #left-nav-paijuhour").click(function () {
     activate_left_nav("paijuhour");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:800px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
     var chart = echarts.init(div_chart[0]);
 
     var data = echarts.dataTool.prepareBoxplotData(
@@ -338,10 +338,10 @@ $("#left-nav-userbehaviour #left-nav-paijuhour").click(function () {
 
 $("#left-nav-userbehaviour #left-nav-rishi").click(function () {
     activate_left_nav("rishi");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:800px");
+    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:800px");
     var chart = echarts.init(div_chart[0]);
 
-    var day = [1, 2, 3, 4, 5, 6, 7];
+    var day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     var time = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
     var data = [
         [0, 0, 728], [0, 1, 730], [0, 2, 814], [0, 3, 788], [0, 4, 1025], [0, 5, 1717], [0, 6, 989], [1, 0, 780], [1, 1, 738], [1, 2, 1516], [1, 3, 927], [1, 4, 1206], [1, 5, 854], [1, 6, 751], [2, 0, 870], [2, 1, 1324], [2, 2, 1369], [2, 3, 728], [2, 4, 856], [2, 5, 697], [2, 6, 766], [3, 0, 735], [3, 1, 989], [3, 2, 977], [3, 3, 1182], [3, 4, 1074], [3, 5, 1157], [3, 6, 853], [4, 0, 818], [4, 1, 647], [4, 2, 1247], [4, 3, 901], [4, 4, 1202], [4, 5, 1273], [4, 6, 774], [5, 0, 759], [5, 1, 928], [5, 2, 1222], [5, 3, 732], [5, 4, 1023], [5, 5, 824], [5, 6, 796], [6, 0, 621], [6, 1, 747], [6, 2, 814], [6, 3, 561], [6, 4, 864], [6, 5, 1034], [6, 6, 805], [7, 0, 381], [7, 1, 691], [7, 2, 438], [7, 3, 680], [7, 4, 817], [7, 5, 497], [7, 6, 594], [8, 0, 322], [8, 1, 347], [8, 2, 201], [8, 3, 422], [8, 4, 508], [8, 5, 254], [8, 6, 256], [9, 0, 132], [9, 1, 125], [9, 2, 73], [9, 3, 168], [9, 4, 167], [9, 5, 133], [9, 6, 179], [10, 0, 28], [10, 1, 36], [10, 2, 143], [10, 3, 27], [10, 4, 49], [10, 5, 111], [10, 6, 63], [11, 0, 73], [11, 1, 53], [11, 2, 98], [11, 3, 23], [11, 4, 28], [11, 5, 52], [11, 6, 90], [12, 0, 79], [12, 1, 29], [12, 2, 93], [12, 3, 111], [12, 4, 14], [12, 5, 90], [12, 6, 21], [13, 0, 98], [13, 1, 30], [13, 2, 105], [13, 3, 68], [13, 4, 106], [13, 5, 150], [13, 6, 73], [14, 0, 44], [14, 1, 255], [14, 2, 142], [14, 3, 111], [14, 4, 184], [14, 5, 189], [14, 6, 148], [15, 0, 253], [15, 1, 309], [15, 2, 184], [15, 3, 354], [15, 4, 451], [15, 5, 337], [15, 6, 439], [16, 0, 405], [16, 1, 280], [16, 2, 421], [16, 3, 510], [16, 4, 430], [16, 5, 770], [16, 6, 393], [17, 0, 501], [17, 1, 350], [17, 2, 434], [17, 3, 498], [17, 4, 338], [17, 5, 552], [17, 6, 329], [18, 0, 462], [18, 1, 583], [18, 2, 412], [18, 3, 541], [18, 4, 604], [18, 5, 444], [18, 6, 336], [19, 0, 689], [19, 1, 539], [19, 2, 478], [19, 3, 678], [19, 4, 1025], [19, 5, 892], [19, 6, 413], [20, 0, 609], [20, 1, 1002], [20, 2, 460], [20, 3, 515], [20, 4, 714], [20, 5, 595], [20, 6, 494], [21, 0, 846], [21, 1, 576], [21, 2, 516], [21, 3, 868], [21, 4, 799], [21, 5, 649], [21, 6, 460], [22, 0, 896], [22, 1, 833], [22, 2, 433], [22, 3, 314], [22, 4, 710], [22, 5, 953], [22, 6, 770], [23, 0, 1027], [23, 1, 924], [23, 2, 718], [23, 3, 1140], [23, 4, 1165], [23, 5, 870], [23, 6, 1099]
@@ -350,7 +350,7 @@ $("#left-nav-userbehaviour #left-nav-rishi").click(function () {
 
     var option = {
         title: {
-            text: '用户游戏的日时分布'
+            text: '用户游戏的日时分布', left: 'center',
         },
         animation: false,
         grid: {
@@ -368,7 +368,6 @@ $("#left-nav-userbehaviour #left-nav-rishi").click(function () {
         yAxis: {
             type: 'category',
             data: day,
-            name: '日',
             splitArea: {
                 show: true
             }
