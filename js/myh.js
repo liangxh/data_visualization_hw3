@@ -161,7 +161,7 @@ $("#left-nav-gameattr #left-nav-replayrate").click(function () {
         tooltip : {
             trigger: 'axis',
             axisPointer: {
-                type: 'shadow'
+                type: 'cross'
             }
         },
         //右上角工具条
