@@ -1,6 +1,6 @@
 function show_userbehaviour_userreturning() {
     activate_left_nav("userreturning");
-    var div_chart = $("<div></div>").attr("style", "width: 1200px; height:900px");
+    var div_chart = $("<div></div>").attr("style", "width: 1100px; height:900px");
     var chart = echarts.init(div_chart[0]);
     //var after_days = ['1', '2', '3', '4', '5', '6', '7'];
     var after_days = new Array(32);
@@ -22,7 +22,7 @@ function show_userbehaviour_userreturning() {
         xAxis: {
             type: 'category',
             data: days,
-            name: 'Install date',
+            name: '安装日期',
             splitArea: {
                 show: true
             }
@@ -30,7 +30,7 @@ function show_userbehaviour_userreturning() {
         yAxis: {
             type: 'category',
             data: after_days,
-            name: 'Days after install',
+            name: '安装后日数',
             splitArea: {
                 show: true
             }

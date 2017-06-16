@@ -77,7 +77,7 @@ function refresh_chart(){
     }
 
     $.get('http://127.0.0.1:8000/test', params, function(ret){
-        var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+        var div_chart = $("<div></div>").attr("style", "width: 1000px; height:550px");
         $("#chartframe").html(div_chart);
 
         var chart = echarts.init(div_chart[0]);
@@ -96,7 +96,7 @@ function show_gamecrate_cratetest(){
             '   <label style="padding:5px">首n局</label><input type="text" id="window" style="width:100px; margin-right:30px" value="10" />'+
             '   <label style="padding:5px">起始</label><input type="text" id="start-idx" style="width:100px; margin-right:30px" value="0"/>'+
             '   <label style="padding:5px">間隔</label><input type="text" id="interval" style="width:100px; margin-right:30px" value="1" />'+
-            '   <label style="padding:5px">排序區間</label><input type="text" id="sort-range" style="width:400px; margin-right:30px" value="3-5" placeholder="如3或3-5"/>'+
+            '   <label style="padding:5px">排序區間</label><input type="text" id="sort-range" style="width:400px; margin-right:30px" value="1-10" placeholder="如3或3-5"/>'+
             '   <input type="button" value="刷新" onclick="refresh_chart()" />'+
             '</div>'
         );

@@ -1,6 +1,6 @@
 function show_gameattr_gametime(){
     activate_left_nav("gametime");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 800px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
@@ -26,7 +26,7 @@ function show_gameattr_gametime(){
         },
         xAxis : [
             {
-                name : '平均时长(min)',
+                name : '平均时长(sec)',
                 type : 'value'
             }
         ],
@@ -54,7 +54,7 @@ function show_gameattr_gametime(){
 
 $("#left-nav-gameattr #left-nav-winrate").click(function () {
     activate_left_nav("winrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 800px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
@@ -80,7 +80,7 @@ $("#left-nav-gameattr #left-nav-winrate").click(function () {
         },
         xAxis : [
             {
-                name : '胜率',
+                name : '胜率(%)',
                 type : 'value'
             }
         ],
@@ -108,7 +108,7 @@ $("#left-nav-gameattr #left-nav-winrate").click(function () {
 
 $("#left-nav-gameattr #left-nav-gametime-winrate").click(function () {
     activate_left_nav("gametime-winrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 800px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
@@ -123,13 +123,13 @@ $("#left-nav-gameattr #left-nav-gametime-winrate").click(function () {
         },
         xAxis : [
             {
-                name : '牌局胜率',
+                name : '牌局胜率(%)',
                 type : 'value'
             }
         ],
         yAxis : [
             {
-                name : '牌局时长',
+                name : '牌局时长(sec)',
                 type : 'value'
             }
         ],
@@ -151,12 +151,12 @@ $("#left-nav-gameattr #left-nav-gametime-winrate").click(function () {
 
 $("#left-nav-gameattr #left-nav-replayrate").click(function () {
     activate_left_nav("replayrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 800px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局再玩率分布', left: 'center',
+            text: '牌局重玩率分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis',
@@ -177,7 +177,7 @@ $("#left-nav-gameattr #left-nav-replayrate").click(function () {
         },
         xAxis : [
             {
-                name : '再玩率',
+                name : '重玩率(%)',
                 type : 'value'
             }
         ],
@@ -189,7 +189,7 @@ $("#left-nav-gameattr #left-nav-replayrate").click(function () {
         ],
         series : [
             {
-                name:'牌局再玩率',
+                name:'牌局重玩率(%)',
                 type:'line',
                 data:[
                     [0, 2645], [1, 64], [2, 93], [3, 66], [4, 47], [5, 37], [6, 25], [7, 21], [8, 16], [9, 7], [10, 11], [11, 5], [12, 7], [13, 2], [14, 5], [15, 2], [16, 4], [17, 2], [18, 2], [20, 4], [21, 2], [22, 2], [25, 8], [27, 1], [30, 1], [33, 7], [38, 1], [44, 1], [50, 12], [53, 1], [66, 1], [71, 1], [75, 1], [80, 2], [83, 2], [96, 1], [100, 24]
@@ -205,25 +205,25 @@ $("#left-nav-gameattr #left-nav-replayrate").click(function () {
 
 $("#left-nav-gameattr #left-nav-replayrate-winrate").click(function () {
     activate_left_nav("replayrate-winrate");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 800px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var option = {
         title : {
-            text: '牌局胜率再玩率联合分布', left: 'center',
+            text: '牌局胜率重玩率联合分布', left: 'center',
         },
         tooltip : {
             trigger: 'axis'
         },
         xAxis : [
             {
-                name : '牌局胜率',
+                name : '胜率(%)',
                 type : 'value'
             }
         ],
         yAxis : [
             {
-                name : '牌局再玩率',
+                name : '重玩率(%)',
                 type : 'value'
             }
         ],
@@ -245,7 +245,7 @@ $("#left-nav-gameattr #left-nav-replayrate-winrate").click(function () {
 
 $("#left-nav-userbehaviour #left-nav-paijuhour").click(function () {
     activate_left_nav("paijuhour");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:600px");
+    var div_chart = $("<div></div>").attr("style", "width: 800px; height:500px");
     var chart = echarts.init(div_chart[0]);
 
     var data = echarts.dataTool.prepareBoxplotData(
@@ -324,7 +324,7 @@ $("#left-nav-userbehaviour #left-nav-paijuhour").click(function () {
 
 $("#left-nav-userbehaviour #left-nav-rishi").click(function () {
     activate_left_nav("rishi");
-    var div_chart = $("<div></div>").attr("style", "width: 1000px; height:800px");
+    var div_chart = $("<div></div>").attr("style", "width: 1100px; height:800px");
     var chart = echarts.init(div_chart[0]);
 
     var day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
